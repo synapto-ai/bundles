@@ -1,0 +1,24 @@
+[package]
+name = "personal-assistant"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+synapto.workspace = true
+synapto-test.workspace = true
+tokio.workspace = true
+datadir-local.workspace = true
+prompt-file.workspace = true
+
+host-audio.workspace = true
+clock.workspace = true
+behavioral-memory.workspace = true
+stt-google.workspace = true
+tts-google.workspace = true
+speaker-recognizer.workspace = true
+
+documents = { path = "../../../allusio-ai/synapto-plugins/documents" }
+episodic-memory = { path = "../../../allusio-ai/synapto-plugins/episodic-memory" }
+semantic-memory = { path = "../../../allusio-ai/synapto-plugins/semantic-memory" }

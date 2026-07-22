@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "home-assistant",
+    "org-assistant",
+    "personal-assistant",
+    "research",
+    "rpg",
+    "teacher",
+]
+
+[workspace.package]
+version = "0.1.0-dev.2"
+edition = "2024"
+license = "MPL-2.0"
+repository = "https://github.com/synapto-ai/synapto"
+
+[workspace.dependencies]
+synapto = { path = "../synapto/crates/core", version = "0.1.0-dev.2" }
+synapto-test = { path = "../synapto/crates/test" }
+synapto-interface = { path = "../synapto/crates/interface", version = "0.1.0-dev.2" }
+tokio = { version = "1", features = ["macros", "signal", "rt", "rt-multi-thread", "net", "time"] }
+
+# Shared Integrations & Providers
+datadir-local = { path = "../integrations/datadir-providers/local" }
+prompt-file = { path = "../integrations/prompt-providers/file" }
+clock = { package = "synapto-plugin-clock", path = "../integrations/plugins/clock" }
+host-audio = { package = "synapto-plugin-linux-host-audio", path = "../integrations/plugins/linux-host-audio" }
+stt-google = { package = "synapto-plugin-stt-google", path = "../integrations/plugins/stt-google" }
+tts-google = { package = "synapto-plugin-tts-google", path = "../integrations/plugins/tts-google" }
+
+# Shared Synapto Plugins
+behavioral-memory = { path = "../../allusio-ai/synapto-plugins/behavioral-memory" }
+speaker-recognizer = { path = "../../allusio-ai/synapto-plugins/speaker-recognizer", features = ["speaker-recognizer-tract"] }

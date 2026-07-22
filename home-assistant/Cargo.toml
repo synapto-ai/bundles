@@ -1,0 +1,21 @@
+[package]
+name = "home-assistant"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+synapto.workspace = true
+synapto-test.workspace = true
+tokio.workspace = true
+datadir-local.workspace = true
+prompt-file.workspace = true
+
+clock.workspace = true
+behavioral-memory.workspace = true
+stt-google.workspace = true
+tts-google.workspace = true
+speaker-recognizer.workspace = true
+
+mumble = { package = "synapto-plugin-mumble", path = "../../integrations/plugins/mumble" }
