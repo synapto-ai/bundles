@@ -15,4 +15,3 @@ prompt-file.workspace = true
 clock.workspace = true
 stt-google.workspace = true
 tts-google.workspace = true
-speaker-recognizer.workspace = true

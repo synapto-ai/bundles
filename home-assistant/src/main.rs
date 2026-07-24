@@ -1,9 +1,7 @@
-use behavioral_memory::BehavioralMemoryPlugin;
 use clock::ClockPlugin;
 use datadir_local::DataLocalDir;
 use mumble::MumblePlugin;
 use prompt_file::FilePromptProvider;
-use speaker_recognizer::SpeakerRecognizerPlugin;
 use std::process::ExitCode;
 use stt_google::SttGooglePlugin;
 use synapto::config::{ConfigJson, DotEnv, Env};
@@ -23,10 +21,8 @@ async fn main() -> ExitCode {
     >::run::<(
         MumblePlugin,
         ClockPlugin,
-        BehavioralMemoryPlugin<Storage>,
         SttGooglePlugin,
         TtsGooglePlugin,
-        SpeakerRecognizerPlugin,
     )>()
     .await
 }

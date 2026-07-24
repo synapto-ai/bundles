@@ -3,9 +3,7 @@ resolver = "2"
 
 members = [
     "home-assistant",
-    "org-assistant",
     "personal-assistant",
-    "research",
     "rpg",
     "teacher",
 ]
@@ -26,10 +24,7 @@ tokio = { version = "1", features = ["macros", "signal", "rt", "rt-multi-thread"
 datadir-local = { path = "../integrations/datadir-providers/local" }
 prompt-file = { path = "../integrations/prompt-providers/file" }
 clock = { package = "synapto-plugin-clock", path = "../integrations/plugins/clock" }
+mcp = { package = "synapto-plugin-mcp", path = "../integrations/plugins/mcp" }
 host-audio = { package = "synapto-plugin-linux-host-audio", path = "../integrations/plugins/linux-host-audio" }
 stt-google = { package = "synapto-plugin-stt-google", path = "../integrations/plugins/stt-google" }
 tts-google = { package = "synapto-plugin-tts-google", path = "../integrations/plugins/tts-google" }
-
-# Shared Synapto Plugins
-behavioral-memory = { path = "../../allusio-ai/synapto-plugins/behavioral-memory" }
-speaker-recognizer = { path = "../../allusio-ai/synapto-plugins/speaker-recognizer", features = ["speaker-recognizer-tract"] }

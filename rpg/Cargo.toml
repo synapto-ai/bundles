@@ -15,6 +15,5 @@ prompt-file.workspace = true
 host-audio.workspace = true
 clock.workspace = true
 tts-google.workspace = true
-speaker-recognizer.workspace = true
 
 stt-speechmatics = { package = "synapto-plugin-stt-speechmatics", path = "../../integrations/plugins/stt-speechmatics" }
